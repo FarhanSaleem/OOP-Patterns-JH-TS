@@ -9,7 +9,7 @@ interface IFileReader {
 export class DirectoryScraper {
   constructor(public directoryPath: string, public fileReader: IFileReader) {}
 
-  scanFiles(directoryPath: string) {
+  scanFiles() {
     return fs
       .readdirSync(this.directoryPath)
       .reduce<Record<string, unknown>>(

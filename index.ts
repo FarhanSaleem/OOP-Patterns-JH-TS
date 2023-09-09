@@ -18,7 +18,7 @@ loggerFactory.error('logger error');
 
 // Builder pattern
 const fileReader = new DirectoryFileReader();
-const directoryScraper = new DirectoryScraper('./data', fileReader);
+const directoryScraper = new DirectoryScraper('./builder/data', fileReader);
 
 const output = directoryScraper.scanFiles();
 

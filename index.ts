@@ -5,7 +5,7 @@ import {
   DirectoryFileReader,
   DirectoryScraper,
 } from './builder/dir-scraper-class';
-import { CustomerBuilder } from './customer-builder';
+import { CustomerBuilder } from './builder/customer-builder';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');

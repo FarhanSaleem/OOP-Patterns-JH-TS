@@ -29,6 +29,7 @@ export class CustomerBuilder {
 
   constructor(name: string) {
     this.customer = new Customer(name);
+    this.customer.customerId = Math.floor((Math.random() * 10000) + 1);
     return this;
   }
 

@@ -5,6 +5,7 @@ import {
   DirectoryFileReader,
   DirectoryScraper,
 } from './builder/dir-scraper-class';
+import { CustomerBuilder } from './customer-builder';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
@@ -17,9 +18,17 @@ loggerFactory.info('logger created!');
 loggerFactory.error('logger error');
 
 // Builder pattern
-const fileReader = new DirectoryFileReader();
-const directoryScraper = new DirectoryScraper('./builder/data', fileReader);
+// const fileReader = new DirectoryFileReader();
+// const directoryScraper = new DirectoryScraper('./builder/data', fileReader);
 
-const output = directoryScraper.scanFiles();
+// const output = directoryScraper.scanFiles();
 
-console.log(output);
+// console.log(output);
+
+const customer = new CustomerBuilder('Farhan')
+                        .setAddress('123 Peachtree St')
+                        .setEmail('Imadeveloper@gmail.com')
+                        .setPhoneNumber('1234325264')
+                        .build();
+                                    
+console.log(customer);
